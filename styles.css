@@ -1,0 +1,208 @@
+:root {
+  --bg: #000000;
+  --bg-soft: #090909;
+  --text: #e7e7e2;
+  --muted: #b9b9b1;
+  --muted-2: #8d8d86;
+  --gold: #f4c243;
+  --navy: #102759;
+  --max-width: 920px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Neuton", Georgia, serif;
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong,
+code {
+  color: #ffffff;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95em;
+}
+
+.hero {
+  position: relative;
+  min-height: 72vh;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  background-image: url("krummholzCC_logo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.52) 45%, rgba(0, 0, 0, 0.9) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  padding: 0 0 4rem;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 0.75rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+}
+
+.hero h1,
+.intro h2,
+.section-heading h2 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.hero h1 {
+  max-width: 15ch;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  text-wrap: balance;
+}
+
+.hero-copy {
+  max-width: 28rem;
+  margin: 1rem 0 0;
+  color: var(--text);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.content {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  padding: 3.5rem 0 4rem;
+}
+
+.intro,
+.embed-section {
+  padding: 0;
+}
+
+.embed-section + .embed-section {
+  margin-top: 4rem;
+}
+
+.intro {
+  margin-bottom: 4rem;
+}
+
+.intro h2,
+.section-heading h2 {
+  max-width: 25ch;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  margin-bottom: 1rem;
+}
+
+.intro p,
+.section-heading p {
+  max-width: 44rem;
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.section-heading {
+  text-align: left;
+  margin-bottom: 1.75rem;
+}
+
+.section-heading p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.embed-left {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.instagram-wrap,
+.strava-wrap {
+  text-align: left;
+}
+
+.strava-wrap {
+  min-height: 160px;
+}
+
+.strava-embed-placeholder,
+.strava-wrap iframe {
+  width: min(100%, 540px);
+  
+}
+
+.site-footer {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  padding: 0 0 2.25rem;
+  text-align: left;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted-2);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 62vh;
+    background-position: 35% center;
+  }
+
+  .hero-inner {
+    padding-bottom: 2.75rem;
+  }
+
+  .content {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .intro {
+    margin-bottom: 3rem;
+  }
+
+  .embed-section + .embed-section {
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .intro p,
+  .section-heading p {
+    font-size: 1.02rem;
+  }
+}
